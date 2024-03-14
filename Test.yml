@@ -1,11 +1,6 @@
 ---
-- name: Execute remote command (using password vault)
-  hosts: all
-  
+- hosts: all
   tasks:
-    - name: Create text file with message
-      copy:
-          dest: "/home/pi/Desktop/test.txt"
-          content: |
-            line 01
-            line 02
+    - name: Print message
+      debug:
+        msg: Hello Ansible World
