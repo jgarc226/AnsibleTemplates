@@ -2,14 +2,6 @@
 - name: Execute remote command (using password vault)
   hosts: all
   tasks:
-    - name: Run command on remote host
-      command: "ls -l /etc"
-      become: true
-      become_user: root
-      become_method: sudo
-      args:
-        username: "{{ vault_ssh_login.username }}"  # Reference username from vault
-        password: "{{ vault_ssh_login.password }}" # Reference password from vault
     - name: Create text file with message
       file:
         path: /tmp/test.txt
