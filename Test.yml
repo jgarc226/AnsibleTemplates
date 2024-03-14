@@ -4,8 +4,8 @@
   tasks:
     - name: Create text file with message
       file:
-        path: /tmp/test.txt
-        state: present
+        path: home/pi/test.txt
+        state: content
         content: "Test Successful!"
         mode: 0644
   become: true
