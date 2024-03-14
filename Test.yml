@@ -5,7 +5,7 @@
     - name: Create text file with message
       file:
         path: home/pi/test.txt
-        state: touch
+        state: present
         content: "Test Successful!"
         mode: 0644
   become: true
