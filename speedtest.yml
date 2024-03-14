@@ -9,5 +9,5 @@
 
     - name: Install speedtest
       apt:
-        name: speedtest-cli
+        name: speedtest
         state: present
