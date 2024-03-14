@@ -1,0 +1,13 @@
+---
+- name: Install Speedtest on Ubuntu
+  hosts: all
+  become: true  # Requires sudo privileges
+  tasks:
+    - name: Update package lists
+      apt: 
+        update_cache: yes
+
+    - name: Install speedtest
+      apt:
+        name: speedtest-cli
+        state: present
