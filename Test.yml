@@ -6,7 +6,7 @@
   tasks:
     - name: Create text file with message
       copy:
-        dest: home/pi/test.txt
+        dest: /home/pi/test.txt
         content: "Test Successful!"
         mode: 0644
   become: true
