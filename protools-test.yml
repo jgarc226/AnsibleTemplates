@@ -1,0 +1,9 @@
+---
+- hosts: all
+  tasks:
+    - name: create test file
+      copy:
+        content: "Success!"
+        dest: /Users/Administrator/Desktop/test.txt
+        force: false
+        mode: 777
