@@ -5,5 +5,5 @@
   
   tasks:
     - name: Create text file with message
-      shell: echo "Success!" > test.txt
+      shell: echo "Success!" > /home/pi/test.txt
 
