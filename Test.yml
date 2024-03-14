@@ -6,6 +6,6 @@
   tasks:
     - name: Create text file with message
       file:
-        path: /home/pi/test.txt
+        path: /home/pi/Desktop/test.txt
         state: touch
 
