@@ -1,6 +1,8 @@
 ---
 - name: Execute remote command (using password vault)
   hosts: all
+  become: true
+  
   tasks:
     - name: Create text file with message
       file:
