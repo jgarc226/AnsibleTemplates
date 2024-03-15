@@ -9,7 +9,9 @@
       copy:
         src: /tmp/Youlean-Loudness-Meter-2-V2.4.4-macOS.zip   # Replace with the actual path to your file
         dest: /Users/administrator/Desktop/ # Replace with the desired destination on the remote host
-        mode: 0755  # Set permissions for the copied file (optional)
+        owner: Administrator
+        group: Administrator
+        mode: '0755'  # Set permissions for the copied file (optional)
       register: copy_result
 
     - name: Debug copy result (optional)
