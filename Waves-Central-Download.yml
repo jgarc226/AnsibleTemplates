@@ -2,12 +2,13 @@
 - name: Download file from URL
   hosts: all  # Replace with specific hosts if needed
   become: true
-  
-  tasks:
-    - name: Download Waves Central installer
-        shell: curl -o waves_central_macos.dmg https://cf-installers.waves.com
-        chdir: /Users/administrator/Downloads
 
-    - name: Debug the result (optional)
-        debug:
-        msg: "{{ file_check.stdout }}"
+  tasks:
+    - name: Echo a message
+      shell: curl -o waves_central_macos.dmg https://cf-installers.waves.com
+      chdir: /Users/administrator/Downloads
+  
+
+    #- name: Debug the result (optional)
+       # debug:
+       # msg: "{{ file_check.stdout }}"
