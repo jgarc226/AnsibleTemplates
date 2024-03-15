@@ -1,0 +1,10 @@
+---
+- hosts: all # Replace with your actual host group or hostname
+  tasks:
+    - name: Copy file to remote host
+      copy:
+        src: /home/jgarc226/Documents/test.txt  # Replace with the actual path to your file
+        dest: /home/pi/Downloads  # Replace with the desired destination on remote host
+        mode: 0777  # Set file permissions (optional)
+      become: yes  # Run with elevated privileges (may be required)
+
