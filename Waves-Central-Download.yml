@@ -4,10 +4,12 @@
   become: true
 
   tasks:
-    - name: Echo a message
-      shell: curl -o waves_central_macos.dmg https://cf-installers.waves.com
-    # chdir: /Users/administrator/Downloads
+
+    - name: Change to Downloads directory
+      shell: cd /Users/administrator/Downloads
   
+    - name: Download Waves Download
+      shell: curl -o waves_central_macos.dmg https://cf-installers.waves.com
 
     #- name: Debug the result (optional)
        # debug:
