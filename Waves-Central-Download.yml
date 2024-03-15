@@ -6,10 +6,10 @@
   tasks:
 
     - name: Change to Downloads directory
-      shell: cd /Users/administrator/Downloads
+      shell: cd /Users/administrator/Downloads && curl -o waves_central_macos.dmg https://cf-installers.waves.com
   
-    - name: Download Waves Download
-      shell: curl -o waves_central_macos.dmg https://cf-installers.waves.com
+    #- name: Download Waves Download
+    #  shell: curl -o waves_central_macos.dmg https://cf-installers.waves.com
 
     #- name: Debug the result (optional)
        # debug:
