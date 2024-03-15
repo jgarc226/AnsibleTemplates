@@ -5,9 +5,9 @@
   
   tasks:
     - name: Download Waves Central installer
-       shell: curl -o waves_central_macos.dmg https://cf-installers.waves.com
-       chdir: /Users/administrator/Downloads
+      shell: curl -o waves_central_macos.dmg https://cf-installers.waves.com
+      chdir: /Users/administrator/Downloads
 
     - name: Debug the result (optional)
-       debug:
-       msg: "{{ file_check.stdout }}"
+      debug:
+      msg: "{{ file_check.stdout }}"
