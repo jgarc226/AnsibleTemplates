@@ -7,7 +7,7 @@
   tasks:
     - name: Copy file from local to remote
       copy:
-        src: /tmp/Youlean-Loudness-Meter-2-V2.4.4-macOS.zip   # Replace with the actual path to your file
+        src: /home/ansible/Documents/Youlean-Loudness-Meter-2-V2.4.4-macOS.zip   # Replace with the actual path to your file
         dest: /Users/administrator/Desktop/ # Replace with the desired destination on the remote host
         owner: Administrator
         group: Administrator
