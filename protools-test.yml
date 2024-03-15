@@ -1,5 +1,6 @@
 ---
-- hosts: all
+- name: text file create test
+  hosts: all
   become: true
   
   tasks:
