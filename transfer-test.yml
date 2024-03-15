@@ -10,7 +10,6 @@
       copy:
         src: /home/ansible/Deployments/Youlean-Loudness-Meter-2-V2.4.4-macOS.zip   # Replace with the actual path to your file
         dest: /Users/administrator/Desktop/ # Replace with the desired destination on the remote host
-        remote_src: yes
         owner: root
         group: root
         mode: '0755'  # Set permissions for the copied file (optional)
