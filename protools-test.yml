@@ -6,4 +6,4 @@
         content: "Success!"
         dest: /Users/Administrator/Desktop/test.txt
         force: false
-        mode: 777
+        mode: 0777
