@@ -1,0 +1,13 @@
+---
+- name: Download file from URL
+  hosts: all  # Replace with specific hosts if needed
+  tasks:
+    - name: Download Waves Central installer
+      get_url:
+        url: https://cf-installers.waves.com # Replace with actual URL
+        dest: /Users/administrator/Downloads  # Replace with desired location
+      register: download_result
+
+    - name: Debug download result (optional)
+      debug:
+        msg: "File downloaded successfully: {{ download_result.changed }}"
