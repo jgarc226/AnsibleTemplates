@@ -1,6 +1,8 @@
 ---
 - name: Download file from URL
   hosts: all  # Replace with specific hosts if needed
+  become: true
+  
   tasks:
     - name: Download Waves Central installer
       get_url:
