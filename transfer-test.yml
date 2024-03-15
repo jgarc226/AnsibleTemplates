@@ -1,6 +1,7 @@
 ---
 - name: Transfer file from local to remote host
   hosts: all
+  become: true
 
   tasks:
     - name: Copy file from local to remote
