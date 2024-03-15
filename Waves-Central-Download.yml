@@ -5,11 +5,9 @@
   
   tasks:
     - name: Download Waves Central installer
-      get_url:
-        url: https://cf-installers.waves.com # Replace with actual URL
-        dest: /Users/administrator/Downloads  # Replace with desired location
-      register: download_result
+       shell: curl -o waves_central_macos.dmg https://cf-installers.waves.com
+       chdir: /Users/administrator/Downloads
 
-    - name: Debug download result (optional)
-      debug:
-        msg: "File downloaded successfully: {{ download_result.changed }}"
+    - name: Debug the result (optional)
+       debug:
+       msg: "{{ file_check.stdout }}"
