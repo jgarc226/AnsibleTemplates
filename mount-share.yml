@@ -1,0 +1,16 @@
+---
+- hosts: all  # Replace with your Samba share target host(s)
+  become: true
+  tasks:
+    - name: Mount Samba share
+      mount:
+        name: "{{ mount_point }}"  # Replace with desired mount point
+        src: "//{{ samba_server }}/{{ share_name }}"  # Replace with server and share name
+        fstype: smbfs
+        opts: "{{ mount_options }}"  # Optional mount options (username=user,password=pass)
+
+  vars:
+    samba_server: "100.97.54.44"  # Replace with the Samba server hostname/IP
+    share_name: "usmdcisilon01"  # Replace with the name of the Samba share
+    mount_point: "/Volumes"  # Replace with the desired mount point on the remote host
+    mount_options: ""  # Optional: username=user,password=pass (avoid storing credentials in plain text)
