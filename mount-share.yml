@@ -1,6 +1,8 @@
 ---
 - hosts: all  # Replace with your Samba share target host(s)
   become: true
+  become_user: root
+  become_method: sudo
   tasks:
     - name: Mount Samba share
       mount:
