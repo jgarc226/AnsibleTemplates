@@ -11,6 +11,7 @@
         fstype: smbfs
         opts: "{{ mount_options }}"  # Optional mount options (username=user,password=pass)
         state: present
+        become_user: root
 
   vars:
     samba_server: "100.97.54.44"  # Replace with the Samba server hostname/IP
