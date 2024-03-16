@@ -11,7 +11,7 @@
         fstype: smbfs
         opts: "{{ mount_options }}"  # Optional mount options (username=user,password=pass)
         state: present
-        remote_src: true
+        #remote_src: true
       become_user: root
       
 
