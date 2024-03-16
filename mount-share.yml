@@ -13,4 +13,4 @@
     samba_server: "100.97.54.44"  # Replace with the Samba server hostname/IP
     share_name: "usmdcisilon01"  # Replace with the name of the Samba share
     mount_point: "/Volumes"  # Replace with the desired mount point on the remote host
-    mount_options: ""  # Optional: username=user,password=pass (avoid storing credentials in plain text)
+    mount_options: "username=206523306,password=T@1wan0to35"  # Optional: username=user,password=pass (avoid storing credentials in plain text)
