@@ -1,8 +1,8 @@
 ---
 - name: Run secure copy shell command
   hosts: localhost
-  become: true
   become_user: root
+  become_method: sudo
   
   tasks:
     - name: secure_copy
