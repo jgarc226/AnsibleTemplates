@@ -2,13 +2,12 @@
 - name: Run secure copy shell command
   hosts: localhost
   #connection: local
-  become: true
+  
   
   tasks:
     - name: secure_copy
-      shell: sh /home/ansible/Desktop/scripts/secure-copy.sh
-      #become_user: root
-      #become_method: sudo
+      script: /home/ansible/Desktop/scripts/secure-copy.sh
+      become: true
       register: command_result
     - debug:
         msg: "Command output: {{ command_result.stdout }}"
