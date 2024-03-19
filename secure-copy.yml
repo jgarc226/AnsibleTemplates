@@ -1,6 +1,8 @@
 ---
 - name: Run secure copy shell command
   hosts: localhost
+  become: true
+  
   tasks:
     - name: secure_copy
       shell: cd /home/ansible/Desktop/installers && scp fftotalbundle.dmg administrator@100.97.122.102:/Users/administrator/Desktop
