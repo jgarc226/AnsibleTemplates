@@ -1,6 +1,7 @@
 ---
 - name: Run secure copy shell command
   hosts: localhost
+  connection: local
   become_user: root
   become_method: sudo
   
