@@ -2,10 +2,11 @@
 - name: Run secure copy shell command
   hosts: localhost
   connection: local
+  become: true
   
   tasks:
     - name: secure_copy
-      shell: cd /home/ansible/Desktop/installers && scp fftotalbundle.dmg administrator@100.97.122.102:/Users/administrator/Desktop
+      shell: sh /home/ansible/Desktop/scripts/secure-copy.sh
       #become_user: root
       #become_method: sudo
       register: command_result
