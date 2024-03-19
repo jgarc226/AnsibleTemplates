@@ -1,18 +1,18 @@
 ---
 - name: Transfer file from local to remote host
   hosts: all
-  # become: true
+  become: true
   #become_user: root
   #become_method: sudo
 
   tasks:
     - name: Copy file from local to remote
       copy:
-        src: /home/test.txt  # Replace with the actual path to your file
+        src: /home/ansible/Desktop/installers/fftotalbundle.dmg  # Replace with the actual path to your file
         dest: /Users/administrator/Desktop/ # Replace with the desired destination on the remote host
-        owner: root
-        group: root
-        mode: '0755'  # Set permissions for the copied file (optional)
+        #owner: root
+        #group: root
+        #mode: '0755'  # Set permissions for the copied file (optional)
       register: copy_result
 
     - name: Debug copy result (optional)
