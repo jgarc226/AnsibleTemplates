@@ -7,4 +7,4 @@
   tasks:
     - name: secure_copy
       script: /home/ansible/Desktop/scripts/secure-copy.sh
-    become: true
+  become: true
