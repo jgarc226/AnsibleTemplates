@@ -1,6 +1,6 @@
 ---
 - name: Run secure copy shell command
-  #hosts: localhost
+  hosts: localhost
   #connection: local
   become: true
   
