@@ -6,8 +6,8 @@
   tasks:
     - name: secure_copy
       shell: cd /home/ansible/Desktop/installers && scp fftotalbundle.dmg administrator@100.97.122.102:/Users/administrator/Desktop
-      become_user: root
-      become_method: sudo
+      #become_user: root
+      #become_method: sudo
       register: command_result
     - debug:
         msg: "Command output: {{ command_result.stdout }}"
