@@ -8,7 +8,3 @@
     - name: secure_copy
       script: /home/ansible/Desktop/scripts/secure-copy.sh
     become: true
-      register: command_result
-    - debug:
-        msg: "Command output: {{ command_result.stdout }}"
-  become: true
