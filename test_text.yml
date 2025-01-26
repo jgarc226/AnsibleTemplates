@@ -1,6 +1,6 @@
 ---
 - name: Create a sample text file on the Desktop
-  hosts: mac1
+  hosts: all
   become: yes
   become_method: sudo
   tasks:
