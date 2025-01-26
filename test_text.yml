@@ -1,0 +1,23 @@
+---
+- name: Create a sample text file on the Desktop
+  hosts: all
+  become: yes
+  become_method: sudo
+  tasks:
+    - name: Ensure /Users/administrator/Desktop exists
+      ansible.builtin.file:
+        path: /Users/administrator/Desktop
+        state: directory
+        owner: administrator
+        group: staff
+        mode: '0755'
+
+    - name: Create a sample text file on the Desktop
+      ansible.builtin.copy:
+        dest: /Users/administrator/Desktop/sample.txt
+        content: |
+          This is a sample text file created by Ansible.
+          You can modify this content as needed.
+        owner: administrator
+        group: staff
+        mode: '0644'
