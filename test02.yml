@@ -3,7 +3,7 @@
   tasks:
   - name: Creating a file with content
     copy:
-      dest: /home/pi/Desktop/test02.txt
+      dest: /home/jgarc226/Desktop/test02.txt
       content: |
         line 01
         line 02
