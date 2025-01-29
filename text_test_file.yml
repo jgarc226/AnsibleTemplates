@@ -1,0 +1,10 @@
+---
+- name: Create a test file
+  hosts: all
+  become: yes
+  tasks:
+    
+    - name: Create the test file with a message
+      copy:
+        dest: "/Users/administrator/Desktop/test"
+        content: "Test from Semaphore"
